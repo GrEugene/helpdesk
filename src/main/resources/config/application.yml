@@ -1,0 +1,19 @@
+spring:
+  jpa:
+    properties.hibernate:
+      show_sql: false
+      format_sql: true
+      default_schema: helpdesk
+      jdbc:
+        batch_size: 10
+        order_inserts: true
+        order_updates: true
+
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 25
