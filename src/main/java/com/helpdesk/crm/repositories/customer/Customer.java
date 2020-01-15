@@ -30,7 +30,7 @@ public class Customer extends BaseEntity {
     @ToString.Exclude
     private Market market;
 
-    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "customers", cascade = CascadeType.ALL)
     @EqualsAndHashCode.Exclude
     private Set<Customer> customers = new HashSet<>();
 }

@@ -26,7 +26,7 @@ public class Worker extends BaseEntity {
     private String phone;
     private String email;
 
-    @OneToMany(mappedBy = "worker", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "workers", cascade = CascadeType.ALL)
     @EqualsAndHashCode.Exclude
     private Set<Worker> workers = new HashSet<>();
 }
