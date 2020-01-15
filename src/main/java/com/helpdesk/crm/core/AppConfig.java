@@ -1,4 +1,4 @@
-package com.helpdesk.crm;
+package com.helpdesk.crm.core;
 
 import lombok.extern.slf4j.Slf4j;
 import org.flywaydb.core.Flyway;
