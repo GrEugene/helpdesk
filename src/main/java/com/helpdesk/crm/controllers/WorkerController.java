@@ -5,6 +5,8 @@ import com.helpdesk.crm.dto.worker.WorkerResponse;
 import com.helpdesk.crm.services.worker.WorkerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -42,7 +44,7 @@ public class WorkerController {
     }
 
     @GetMapping
-    public Page<WorkerResponse> getAll() {
-        return workerService.getAll();
+    public Page<WorkerResponse> getAll(@PageableDefault(size = 20) Pageable pageable) {
+        return workerService.getAll(pageable);
     }
 }

@@ -3,7 +3,7 @@ package com.helpdesk.crm.services.worker;
 import com.helpdesk.crm.dto.worker.WorkerRequest;
 import com.helpdesk.crm.dto.worker.WorkerResponse;
 import com.helpdesk.crm.entities.worker.Worker;
-import com.helpdesk.crm.exceptions.NotFoundException;
+import com.helpdesk.crm.exceptions.WorkerNotFoundException;
 import com.helpdesk.crm.repositories.worker.WorkerRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +42,7 @@ public class WorkerServiceImpl implements WorkerService {
     public void delete(Long id) {
         Worker worker = workerRepository
                 .findById(id)
-                .orElseThrow(NotFoundException::new);
+                .orElseThrow(WorkerNotFoundException::new);
         worker.setIsActive(false);
 
         workerRepository.save(worker);
@@ -59,6 +59,6 @@ public class WorkerServiceImpl implements WorkerService {
     public WorkerResponse getById(Long id) {
         return workerRepository.findById(id)
                 .map(WorkerResponse::new)
-                .orElseThrow(NotFoundException::new);
+                .orElseThrow(WorkerNotFoundException::new);
     }
 }
