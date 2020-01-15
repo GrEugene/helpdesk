@@ -1,5 +1,6 @@
 package com.helpdesk.crm.entities.schedule;
 
+import com.helpdesk.crm.dto.schedule.ScheduleRequest;
 import com.helpdesk.crm.entities.manager.Manager;
 import com.helpdesk.crm.entities.worker.Worker;
 import com.helpdesk.crm.repositories.BaseEntity;
@@ -35,4 +36,11 @@ public class Schedule extends BaseEntity {
     @EqualsAndHashCode.Exclude
     @ToString.Exclude
     private Manager manager;
+
+    public Schedule(ScheduleRequest scheduleRequest) {
+        this.id = scheduleRequest.getId();
+        this.name = scheduleRequest.getName();
+        this.dateFrom = scheduleRequest.getDateFrom();
+        this.dateTo = scheduleRequest.getDateTo();
+    }
 }

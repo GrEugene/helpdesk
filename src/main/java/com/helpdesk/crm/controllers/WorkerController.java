@@ -27,13 +27,13 @@ public class WorkerController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public WorkerResponse create(@RequestBody WorkerRequest worker) {
-        return workerService.create(worker);
+    public WorkerResponse create(@RequestBody WorkerRequest workerRequest) {
+        return workerService.create(workerRequest);
     }
 
     @PutMapping
-    public WorkerResponse save(@RequestBody WorkerRequest worker) {
-        return workerService.save(worker);
+    public WorkerResponse save(@RequestBody WorkerRequest workerRequest) {
+        return workerService.save(workerRequest);
     }
 
     @DeleteMapping("/{id}")
