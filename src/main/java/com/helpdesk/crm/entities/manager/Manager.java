@@ -1,5 +1,6 @@
 package com.helpdesk.crm.entities.manager;
 
+import com.helpdesk.crm.dto.manager.ManagerRequest;
 import com.helpdesk.crm.repositories.BaseEntity;
 import com.helpdesk.crm.entities.schedule.Schedule;
 import lombok.AllArgsConstructor;
@@ -30,4 +31,11 @@ public class Manager extends BaseEntity {
     @OneToMany(mappedBy = "manager", cascade = CascadeType.ALL)
     @EqualsAndHashCode.Exclude
     private Set<Schedule> schedules = new HashSet<>();
+
+    public Manager(ManagerRequest managerRequest) {
+        this.id = managerRequest.getId();
+        this.name = managerRequest.getName();
+        this.phone = managerRequest.getPhone();
+        this.email = managerRequest.getEmail();
+    }
 }
