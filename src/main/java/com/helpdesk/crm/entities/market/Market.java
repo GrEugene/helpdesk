@@ -1,7 +1,7 @@
-package com.helpdesk.crm.repositories.market;
+package com.helpdesk.crm.entities.market;
 
+import com.helpdesk.crm.entities.customer.Customer;
 import com.helpdesk.crm.repositories.BaseEntity;
-import com.helpdesk.crm.repositories.customer.Customer;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

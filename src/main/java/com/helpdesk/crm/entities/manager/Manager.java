@@ -1,7 +1,7 @@
-package com.helpdesk.crm.repositories.manager;
+package com.helpdesk.crm.entities.manager;
 
 import com.helpdesk.crm.repositories.BaseEntity;
-import com.helpdesk.crm.repositories.schedule.Schedule;
+import com.helpdesk.crm.entities.schedule.Schedule;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

@@ -1,7 +1,7 @@
-package com.helpdesk.crm.repositories.customer;
+package com.helpdesk.crm.entities.customer;
 
+import com.helpdesk.crm.entities.market.Market;
 import com.helpdesk.crm.repositories.BaseEntity;
-import com.helpdesk.crm.repositories.market.Market;
 import lombok.*;
 
 import javax.persistence.*;

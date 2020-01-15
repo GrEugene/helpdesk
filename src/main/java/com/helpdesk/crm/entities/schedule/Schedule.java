@@ -1,8 +1,8 @@
-package com.helpdesk.crm.repositories.schedule;
+package com.helpdesk.crm.entities.schedule;
 
+import com.helpdesk.crm.entities.manager.Manager;
+import com.helpdesk.crm.entities.worker.Worker;
 import com.helpdesk.crm.repositories.BaseEntity;
-import com.helpdesk.crm.repositories.manager.Manager;
-import com.helpdesk.crm.repositories.worker.Worker;
 import lombok.*;
 
 import javax.persistence.*;
