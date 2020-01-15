@@ -11,8 +11,10 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
+
 @RestController
-@RequestMapping("/workers")
+@RequestMapping(path = "/customers", produces = APPLICATION_JSON_VALUE)
 @Slf4j
 public class CustomerController {
     private final CustomerService customerService;

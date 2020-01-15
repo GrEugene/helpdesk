@@ -1,5 +1,6 @@
 package com.helpdesk.crm.entities.market;
 
+import com.helpdesk.crm.dto.market.MarketRequest;
 import com.helpdesk.crm.entities.customer.Customer;
 import com.helpdesk.crm.repositories.BaseEntity;
 import lombok.AllArgsConstructor;
@@ -33,4 +34,14 @@ public class Market extends BaseEntity {
     @OneToMany(mappedBy = "market", cascade = CascadeType.ALL)
     @EqualsAndHashCode.Exclude
     private Set<Customer> customers = new HashSet<>();
+
+    public Market(MarketRequest marketRequest) {
+        this.id = marketRequest.getId();
+        this.name = marketRequest.getName();
+        this.phone = marketRequest.getPhone();
+        this.address = marketRequest.getAddress();
+        this.contactName = marketRequest.getContactName();
+        this.contactPhone = marketRequest.getContactPhone();
+        this.contactEmail = marketRequest.getContactEmail();
+    }
 }
