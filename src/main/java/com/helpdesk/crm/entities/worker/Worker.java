@@ -1,5 +1,6 @@
-package com.helpdesk.crm.repositories.worker;
+package com.helpdesk.crm.entities.worker;
 
+import com.helpdesk.crm.dto.worker.WorkerRequest;
 import com.helpdesk.crm.repositories.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -29,4 +30,11 @@ public class Worker extends BaseEntity {
     @OneToMany(mappedBy = "workers", cascade = CascadeType.ALL)
     @EqualsAndHashCode.Exclude
     private Set<Worker> workers = new HashSet<>();
+
+    public Worker(WorkerRequest worker) {
+        this.id = worker.getId();
+        this.name = worker.getName();
+        this.phone = worker.getPhone();
+        this.email = worker.getEmail();
+    }
 }
